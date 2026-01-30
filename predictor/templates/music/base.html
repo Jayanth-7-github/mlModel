@@ -1,0 +1,64 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Music Genre Classification</title>
+    <link rel="icon" href="{% static 'music/images/headphone.png' %}" />
+    <!-- Styles -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i"
+      rel="stylesheet"
+    />
+    <link href="{% static 'music/css/bootstrap.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'music/css/fontawesome-all.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'music/css/swiper.css' %}" rel="stylesheet" />
+    <link href="{% static 'music/css/magnific-popup.css' %}" rel="stylesheet" />
+    <link href="{% static 'music/css/styles.css' %}" rel="stylesheet" />
+    <link href="{% static 'music/css/mystyle.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'music/css/simpletextrotator.css' %}"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="page-top">
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    <!-- end of preloader -->
+
+    {% include 'music/snippets/nav.html' %}
+
+    <div class="content">
+      {% block content %}
+
+      <!-- content for different pages here -->
+
+      {% endblock content %}
+    </div>
+
+    {% include 'music/snippets/js.html' %}
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(".up-input").change(function () {
+        $(".up-p").text(this.files.length + " file(s) selected");
+      });
+    });
+  </script>
+  <!-- Bootstrap core JavaScript -->
+</html>
